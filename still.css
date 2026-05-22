@@ -22,7 +22,7 @@ a:hover {
     background-color: #2e6b3e;
     color: white;
     padding: 12px 30px;
-    overflow: hidden;
+
 }
 
 #logo {
@@ -66,7 +66,7 @@ a:hover {
     background-color: #2e6b3e;
     color: white;
     border: none;
-    cursor: pointer;
+   
 }
 
 #hero input[type="submit"]:hover {
@@ -77,7 +77,6 @@ a:hover {
     max-width: 1100px;
     margin: 25px auto;
     padding: 0 20px;
-    overflow: hidden;
 }
 
 #kategorije {
@@ -102,7 +101,7 @@ a:hover {
     border: 1px solid #ddd;
     padding: 20px;
     margin-bottom: 20px;
-    overflow: hidden;
+ 
 }
 
 .sekcija h2 {
