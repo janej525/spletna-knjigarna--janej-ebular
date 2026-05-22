@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
@@ -19,10 +18,6 @@ a:hover {
     text-decoration: underline;
 }
 
-#logo img {
-    height: 40px;
-}
-
 #navbar {
     background-color: #2e6b3e;
     color: white;
@@ -31,10 +26,13 @@ a:hover {
 }
 
 #logo {
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
     float: left;
+    font-size: 20px;
+    color: white;
+}
+
+#logo img {
+    height: 40px;
 }
 
 #nav-povezave {
@@ -44,34 +42,23 @@ a:hover {
 #nav-povezave a {
     color: white;
     margin-left: 15px;
-    font-size: 15px;
-}
-
-#nav-povezave a:hover {
-    text-decoration: underline;
 }
 
 #hero {
     background-color: #ffffff;
     text-align: center;
     padding: 40px 20px;
-    border-bottom: 1px solid #ddd;
 }
 
 #hero h1 {
-    font-size: 28px;
-    margin-bottom: 20px;
     color: #2e6b3e;
+    margin-bottom: 20px;
 }
 
 #hero input[type="text"] {
     width: 350px;
-    padding: 10px 15px;
+    padding: 10px;
     border: 1px solid #ccc;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #ccc;
-    font-size: 15px;
 }
 
 #hero input[type="submit"] {
@@ -80,7 +67,6 @@ a:hover {
     color: white;
     border: none;
     cursor: pointer;
-    font-size: 15px;
 }
 
 #hero input[type="submit"]:hover {
@@ -95,28 +81,16 @@ a:hover {
 }
 
 #kategorije {
+    float: left;
     width: 180px;
-    min-width: 180px;
     background-color: #ffffff;
     border: 1px solid #ddd;
     padding: 15px;
-    height: 300px;
-    float: left;
-}
-
-#kategorije h3 {
-    margin-bottom: 12px;
-    font-size: 16px;
-    color: #2e6b3e;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 8px;
 }
 
 #kategorije a {
     display: block;
     padding: 6px 0;
-    border-bottom: 1px solid #f0f0f0;
-    font-size: 14px;
 }
 
 #knjige-del {
@@ -132,31 +106,18 @@ a:hover {
 }
 
 .sekcija h2 {
-    font-size: 18px;
     color: #2e6b3e;
     margin-bottom: 15px;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 8px;
-}
-
-.sekcija > a {
-    display: inline-block;
-    margin-top: 12px;
-    font-size: 14px;
-}
-
-.knjige-mreza {
-    overflow: hidden;
 }
 
 .knjiga-kartica {
+    float: left;
+    width: 200px;
     border: 1px solid #ddd;
     padding: 15px;
-    width: 200px;
-    background-color: #fafafa;
-    float: left;
     margin-right: 15px;
     margin-bottom: 15px;
+    background-color: #fafafa;
 }
 
 .knjiga-kartica img {
@@ -166,31 +127,16 @@ a:hover {
     margin-bottom: 8px;
 }
 
-.knjiga-kartica h3 {
-    font-size: 15px;
-    margin-bottom: 6px;
-    color: #333;
-}
-
-.knjiga-kartica p {
-    font-size: 13px;
-    color: #666;
-    margin-bottom: 4px;
-}
-
 .knjiga-kartica a {
     display: inline-block;
-    margin-top: 8px;
-    margin-right: 8px;
     padding: 5px 10px;
     background-color: #2e6b3e;
     color: white;
-    font-size: 12px;
+    margin-top: 8px;
 }
 
 .knjiga-kartica a:hover {
     background-color: #245530;
-    text-decoration: none;
 }
 
 #footer {
@@ -205,11 +151,9 @@ a:hover {
 #footer a {
     color: white;
     margin: 0 15px;
-    font-size: 14px;
 }
 
 #footer p {
     margin-top: 8px;
-    font-size: 13px;
     color: #ccc;
 }
