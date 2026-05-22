@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+a {
+    color: #2e6b3e;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#logo img {
+    height: 40px;
+}
+
+#navbar {
+    background-color: #2e6b3e;
+    color: white;
+    padding: 12px 30px;
+    overflow: hidden;
+}
+
+#logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    float: left;
+}
+
+#nav-povezave {
+    float: right;
+}
+
+#nav-povezave a {
+    color: white;
+    margin-left: 15px;
+    font-size: 15px;
+}
+
+#nav-povezave a:hover {
+    text-decoration: underline;
+}
+
+#hero {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 40px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+#hero h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #2e6b3e;
+}
+
+#hero input[type="text"] {
+    width: 350px;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ccc;
+    font-size: 15px;
+}
+
+#hero input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #2e6b3e;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+#hero input[type="submit"]:hover {
+    background-color: #245530;
+}
+
+#vsebina {
+    max-width: 1100px;
+    margin: 25px auto;
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+#kategorije {
+    width: 180px;
+    min-width: 180px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    height: 300px;
+    float: left;
+}
+
+#kategorije h3 {
+    margin-bottom: 12px;
+    font-size: 16px;
+    color: #2e6b3e;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 8px;
+}
+
+#kategorije a {
+    display: block;
+    padding: 6px 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 14px;
+}
+
+#knjige-del {
+    margin-left: 205px;
+}
+
+.sekcija {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.sekcija h2 {
+    font-size: 18px;
+    color: #2e6b3e;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 8px;
+}
+
+.sekcija > a {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+.knjige-mreza {
+    overflow: hidden;
+}
+
+.knjiga-kartica {
+    border: 1px solid #ddd;
+    padding: 15px;
+    width: 200px;
+    background-color: #fafafa;
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+.knjiga-kartica img {
+    width: 100px;
+    height: 130px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.knjiga-kartica h3 {
+    font-size: 15px;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+.knjiga-kartica p {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 4px;
+}
+
+.knjiga-kartica a {
+    display: inline-block;
+    margin-top: 8px;
+    margin-right: 8px;
+    padding: 5px 10px;
+    background-color: #2e6b3e;
+    color: white;
+    font-size: 12px;
+}
+
+.knjiga-kartica a:hover {
+    background-color: #245530;
+    text-decoration: none;
+}
+
+#footer {
+    background-color: #2e6b3e;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    clear: both;
+}
+
+#footer a {
+    color: white;
+    margin: 0 15px;
+    font-size: 14px;
+}
+
+#footer p {
+    margin-top: 8px;
+    font-size: 13px;
+    color: #ccc;
+}
