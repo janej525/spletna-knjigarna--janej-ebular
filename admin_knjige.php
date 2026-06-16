@@ -2,8 +2,8 @@
 require_once 'povezava.php';
 session_start();
 
-if ($_SESSION['vloga'] != "admin") {
-    echo "Nimate dovoljenja.";
+if (!isset($_SESSION['vloga']) || $_SESSION['vloga'] != "admin") {
+    header("Location: index.php");
     exit;
 }
 
@@ -30,6 +30,7 @@ if (isset($_GET['brisi'])) {
     mysqli_query($link, $sql);
 
     header("Location: admin_knjige.php");
+    exit;
 }
 
 if (isset($_GET['uredi'])) {
@@ -61,7 +62,7 @@ if (isset($_POST['dodaj'])) {
     $ime_avtorja = $_POST['ime_avtorja'];
     $priimek_avtorja = $_POST['priimek_avtorja'];
     $naziv_kategorije = $_POST['naziv_kategorije'];
-
+//avtorji
     $sql = "SELECT * FROM avtorji
             WHERE ime = '$ime_avtorja'
             AND priimek = '$priimek_avtorja'";
@@ -75,9 +76,15 @@ if (isset($_POST['dodaj'])) {
         $sql = "INSERT INTO avtorji (ime, priimek)
                 VALUES ('$ime_avtorja', '$priimek_avtorja')";
         mysqli_query($link, $sql);
-        $id_avtor = mysqli_insert_id($link);
-    }
 
+        $sql = "SELECT * FROM avtorji
+                WHERE ime = '$ime_avtorja'
+                AND priimek = '$priimek_avtorja'";
+        $rezultat = mysqli_query($link, $sql);
+        $avtor = mysqli_fetch_array($rezultat);
+        $id_avtor = $avtor['id_avtor'];
+    }
+//kategorije
     $sql = "SELECT * FROM kategorije
             WHERE naziv = '$naziv_kategorije'";
     $rezultat = mysqli_query($link, $sql);
@@ -90,7 +97,12 @@ if (isset($_POST['dodaj'])) {
         $sql = "INSERT INTO kategorije (naziv)
                 VALUES ('$naziv_kategorije')";
         mysqli_query($link, $sql);
-        $id_kategorija = mysqli_insert_id($link);
+
+        $sql = "SELECT * FROM kategorije
+                WHERE naziv = '$naziv_kategorije'";
+        $rezultat = mysqli_query($link, $sql);
+        $kategorija = mysqli_fetch_array($rezultat);
+        $id_kategorija = $kategorija['id_kategorija'];
     }
 
     $sql = "INSERT INTO knjige (naslov, opis, slika, datoteka, id_avtor, id_kategorija)
@@ -123,7 +135,13 @@ if (isset($_POST['shrani'])) {
         $sql = "INSERT INTO avtorji (ime, priimek)
                 VALUES ('$ime_avtorja', '$priimek_avtorja')";
         mysqli_query($link, $sql);
-        $id_avtor = mysqli_insert_id($link);
+
+        $sql = "SELECT * FROM avtorji
+                WHERE ime = '$ime_avtorja'
+                AND priimek = '$priimek_avtorja'";
+        $rezultat = mysqli_query($link, $sql);
+        $avtor = mysqli_fetch_array($rezultat);
+        $id_avtor = $avtor['id_avtor'];
     }
 
     $sql = "SELECT * FROM kategorije
@@ -138,7 +156,12 @@ if (isset($_POST['shrani'])) {
         $sql = "INSERT INTO kategorije (naziv)
                 VALUES ('$naziv_kategorije')";
         mysqli_query($link, $sql);
-        $id_kategorija = mysqli_insert_id($link);
+
+        $sql = "SELECT * FROM kategorije
+                WHERE naziv = '$naziv_kategorije'";
+        $rezultat = mysqli_query($link, $sql);
+        $kategorija = mysqli_fetch_array($rezultat);
+        $id_kategorija = $kategorija['id_kategorija'];
     }
 
     $sql = "UPDATE knjige
@@ -152,6 +175,7 @@ if (isset($_POST['shrani'])) {
     mysqli_query($link, $sql);
 
     header("Location: admin_knjige.php");
+    exit;
 }
 
 $sql = "SELECT * FROM knjige";
@@ -179,19 +203,15 @@ $rezultat_knjige = mysqli_query($link, $sql);
         <p>Opis:<br><textarea name="opis"><?php echo $opis; ?></textarea></p>
         <p>Slika:<br><input type="text" name="slika" value="<?php echo $slika; ?>"></p>
         <p>Datoteka:<br><input type="text" name="datoteka" value="<?php echo $datoteka; ?>"></p>
-
         <p>Ime avtorja:<br>
             <input type="text" name="ime_avtorja" value="<?php echo $ime_avtorja; ?>">
         </p>
-
         <p>Priimek avtorja:<br>
             <input type="text" name="priimek_avtorja" value="<?php echo $priimek_avtorja; ?>">
         </p>
-
         <p>Kategorija:<br>
             <input type="text" name="naziv_kategorije" value="<?php echo $naziv_kategorije; ?>">
         </p>
-
         <?php
         if ($gumb == "Dodaj") {
             echo '<p><input type="submit" name="dodaj" value="Dodaj"></p>';
@@ -212,7 +232,6 @@ $rezultat_knjige = mysqli_query($link, $sql);
             <th>Uredi</th>
             <th>Brisi</th>
         </tr>
-
         <?php
         while ($knjiga = mysqli_fetch_array($rezultat_knjige)) {
             echo '<tr>';
