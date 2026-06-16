@@ -28,6 +28,7 @@ session_start();
 <div id="footer">
     <a href="info.php">Informacije</a>
     <a href="kontakt.php">Kontakt</a>
+    <a href="viri.php">Viri</a>
     <p>2026 Spletna knjigarna</p>
 </div>
 
