@@ -1,6 +1,5 @@
-
 body {
-	margin: 0;
+    margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
     background-color: #f2f2f2;
@@ -13,7 +12,7 @@ body {
 #navigacija {
     background-color: #2d6a3e;
     color: white;
-    padding: 12px 25px;
+    padding: 8px 20px;
     overflow: hidden;
 	
 }
@@ -24,9 +23,8 @@ body {
 }
 
 #logo img {
-    width: 55px;
-    height: 55px;
-    margin-right: 10px;
+    width: 40px;
+    height: 40px;
 }
 
 #povezave {
@@ -88,7 +86,6 @@ body {
     background-color: #2d6a3e;
     padding: 8px 12px;
     text-decoration: none;
-    display: inline-block;
     margin-right: 8px;
 }
 
@@ -104,9 +101,9 @@ body {
 }
 
 .seznam-knjig {
-    display: flex;
     flex-wrap: wrap;
     gap: 15px;
+	display: flex;
 }
 
 .knjiga {
@@ -120,7 +117,9 @@ body {
     width: 120px;
     height: 180px;
 }
-
+.knjiga a {
+    margin-right: 12px;
+}
 .knjiga a,
 .gumb,
 .gumb-link,
@@ -129,11 +128,11 @@ input[type="submit"] {
     color: white;
     padding: 8px 12px;
     text-decoration: none;
-    border: none;
     display: inline-block;
     margin-top: 8px;
-}
-
+	
+	
+}a
 .knjiga a:hover {
     text-decoration: underline;
 }
@@ -205,9 +204,14 @@ input[type="submit"]:hover {
 
 table {
     width: 100%;
-    border-collapse: collapse;
 }
 
+th,
+td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
 #footer {
     background-color: #2d6a3e;
     color: white;
@@ -215,11 +219,11 @@ table {
     padding: 20px;
     margin-top: auto;
 }
-
 #footer a {
     color: white;
     text-decoration: none;
     margin: 10px;
+	
 }
 
 #footer a:hover {
